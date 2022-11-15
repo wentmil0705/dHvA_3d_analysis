@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>582</width>
+    <width>619</width>
     <height>483</height>
    </rect>
   </property>
@@ -94,7 +94,7 @@
        </layout>
       </item>
       <item row="1" column="2">
-       <layout class="QHBoxLayout" name="line_mid_layout">
+       <layout class="QHBoxLayout" name="line_mid_layout" stretch="1,4,1,2">
         <item>
          <widget class="QCheckBox" name="line_checkbox">
           <property name="text">
@@ -108,6 +108,16 @@
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="fermi_energt_label">
+          <property name="text">
+           <string>FE</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fermi_energy_line"/>
         </item>
        </layout>
       </item>
@@ -123,7 +133,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>582</width>
+     <width>619</width>
      <height>21</height>
     </rect>
    </property>

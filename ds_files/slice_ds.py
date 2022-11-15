@@ -55,8 +55,16 @@ class mySlice(QtWidgets.QMainWindow, Ui_slice_window):
         self.mid_slider.valueChanged.connect(self.showMidSlice)
         self.Theta_line.setText(str(0.))
         self.Phi_line.setText(str(0.))
+        self.fermi_energy_line.editingFinished.connect(self.showFermi)
         self.showSc()
     
+    # 费米能改变
+    def showFermi(self):
+        if isFloat(self.fermi_energy_line.text()):
+            self.EFERMI = float(self.fermi_energy_line.text())
+            self.showSlice()
+
+                       
     # 显示滑块所选位置切面
     def showMidSlice(self):        
         try:
@@ -237,6 +245,7 @@ class mySlice(QtWidgets.QMainWindow, Ui_slice_window):
             else:
                 self.BCELL = bcell
                 self.EFERMI = efermi
+                self.fermi_energy_line.setText(str(self.EFERMI))
             self.EBANDS_list.append(ebands)
             self.MESH_list.append(mesh)
             if self.BXSF_list == []:

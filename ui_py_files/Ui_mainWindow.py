@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/mainWindow.ui'
+# Form implementation generated from reading ui file '/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/ui_py_files/ui_files/mainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -696,11 +696,8 @@ class Ui_MainWindow(object):
         self.menuFile.addAction(self.actionImport_bxsf_file)
         self.menuFile.addAction(self.menuImport_skeaf_file.menuAction())
         self.menuFile.addSeparator()
-        self.menuFile.addAction(self.actionExport_figure_data)
-        self.menuFile.addAction(self.actionSave_figure)
         self.menuNormal_calculation.addAction(self.actionSettng_parameters)
         self.menuCalc.addAction(self.menuNormal_calculation.menuAction())
-        self.menuCalc.addAction(self.actionRotating_angle_calculation)
         self.menuCalc.addAction(self.actionSaving_results)
         self.menuGroup_Velocity.addAction(self.actioncalculate)
         self.menuGroup_Velocity.addSeparator()
@@ -720,7 +717,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Skeaf_demo"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "dHvA 3D Analysis"))
         self.mode_label.setText(_translate("MainWindow", "Mode"))
         self.simple_button.setText(_translate("MainWindow", "SImple"))
         self.seperate_button.setText(_translate("MainWindow", "Seperate"))

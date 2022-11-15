@@ -8,7 +8,7 @@ mainWindow_ds.为Ui_mainWindow.py界面对应功能的设计文件
 '''
 
 from turtle import bgcolor
-from ui_py_files.Ui_mainWindow import Ui_MainWindow
+from ui_py_files.ui_mainWindow import Ui_MainWindow
 from PyQt5 import QtWidgets
 from mayavi_show import *
 import numpy as np

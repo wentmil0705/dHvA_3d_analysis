@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/slice.ui'
+# Form implementation generated from reading ui file '/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/ui_py_files/ui_files/slice.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_slice_window(object):
     def setupUi(self, slice_window):
         slice_window.setObjectName("slice_window")
-        slice_window.resize(582, 483)
+        slice_window.resize(619, 483)
         self.slice_centralwidget = QtWidgets.QWidget(slice_window)
         self.slice_centralwidget.setObjectName("slice_centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.slice_centralwidget)
@@ -87,6 +87,16 @@ class Ui_slice_window(object):
         self.mid_slider.setOrientation(QtCore.Qt.Horizontal)
         self.mid_slider.setObjectName("mid_slider")
         self.line_mid_layout.addWidget(self.mid_slider)
+        self.fermi_energt_label = QtWidgets.QLabel(self.slice_centralwidget)
+        self.fermi_energt_label.setObjectName("fermi_energt_label")
+        self.line_mid_layout.addWidget(self.fermi_energt_label)
+        self.fermi_energy_line = QtWidgets.QLineEdit(self.slice_centralwidget)
+        self.fermi_energy_line.setObjectName("fermi_energy_line")
+        self.line_mid_layout.addWidget(self.fermi_energy_line)
+        self.line_mid_layout.setStretch(0, 1)
+        self.line_mid_layout.setStretch(1, 4)
+        self.line_mid_layout.setStretch(2, 1)
+        self.line_mid_layout.setStretch(3, 2)
         self.param_layout.addLayout(self.line_mid_layout, 1, 2, 1, 1)
         self.param_layout.setRowStretch(0, 2)
         self.param_layout.setRowStretch(1, 5)
@@ -98,7 +108,7 @@ class Ui_slice_window(object):
         self.gridLayout_2.setRowStretch(1, 5)
         slice_window.setCentralWidget(self.slice_centralwidget)
         self.slice_menubar = QtWidgets.QMenuBar(slice_window)
-        self.slice_menubar.setGeometry(QtCore.QRect(0, 0, 582, 21))
+        self.slice_menubar.setGeometry(QtCore.QRect(0, 0, 619, 21))
         self.slice_menubar.setObjectName("slice_menubar")
         self.slice_menufiles = QtWidgets.QMenu(self.slice_menubar)
         self.slice_menufiles.setObjectName("slice_menufiles")
@@ -146,6 +156,7 @@ class Ui_slice_window(object):
         self.Theta_label.setText(_translate("slice_window", "Theta (degree)"))
         self.Phi_label.setText(_translate("slice_window", "Phi (degree)"))
         self.line_checkbox.setText(_translate("slice_window", "line"))
+        self.fermi_energt_label.setText(_translate("slice_window", "FE"))
         self.slice_menufiles.setTitle(_translate("slice_window", "files"))
         self.menumore.setTitle(_translate("slice_window", "more"))
         self.slice_actionimport_bxsf_files.setText(_translate("slice_window", "import bxsf files"))

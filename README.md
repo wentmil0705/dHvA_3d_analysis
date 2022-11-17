@@ -57,7 +57,7 @@ It is pretty easy to run the software if you have get your environment ready, be
 The software achieved almost all basic functions of fermi-surface plotting functions. After you open the software successfully, you will see the window below,
 
 
-![1.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/1.png)
+![1.png](pic/1.png)
 
 
 Then you can click **File -> Import bxsf file** to input the fermi-surface file, the basic format of bxsf file is showed in the test file, remember to keep the same format or you will get different wrong reports and the software will quit. Choose different ways to show the fermi-surface,

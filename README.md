@@ -57,7 +57,7 @@ It is pretty easy to run the software if you have get your environment ready, be
 The software achieved almost all basic functions of fermi-surface plotting functions. After you open the software successfully, you will see the window below,
 
 
-![1.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/1.png)
+![1.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/1.png)
 
 
 Then you can click **File -> Import bxsf file** to input the fermi-surface file, the basic format of bxsf file is showed in the test file, remember to keep the same format or you will get different wrong reports and the software will quit. Choose different ways to show the fermi-surface,
@@ -88,7 +88,7 @@ Then you can click **File -> Import bxsf file** to input the fermi-surface file,
 Below is an example of way to show fermi surface,
 
 
-![2.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/2.png)
+![2.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/2.png)
 
 
 ### Showing skeaf results functions
@@ -107,12 +107,12 @@ If you want to analyze the results generate from skeaf, you can click **File->Im
 Below are some examples,
 
 
-![3.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/3.png)
-![4.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/4.png)
-![5.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/5.png)
-![6.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/6.png)
-![7.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/7.png)
-![8.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/8.png)
+![3.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/3.png)
+![4.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/4.png)
+![5.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/5.png)
+![6.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/6.png)
+![7.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/7.png)
+![8.png](/Users/wentworth/Desktop/skeaf_demo_sw/pic/8.png)
 
 
 

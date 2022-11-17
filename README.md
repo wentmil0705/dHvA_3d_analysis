@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # dHvA_3d_analysis
 Use Mayavi and PyQt5 to provide a platform to visualize the results of dHvA calculations
-MORE TO KNOW ABOUT THE SOFTWARE PLEASE READ dHvA 3D Analysis Documentation
-=======
+# MORE TO KNOW ABOUT THE SOFTWARE PLEASE READ dHvA 3D Analysis Documentation
 # dhva_skeaf_data_analysis
 This is software which can analyze the results from skeaf, a dhva calculating open-source program-me. By analyzing the results files, the software can draw de orbit outline, extreme value, and the orbit in the fermi-surface. The software also achieve almost all fermi-surface painting functions.
 
@@ -126,5 +124,3 @@ If you get any problems, please feel free to contact me,
 
 **532239580@qq.com**
 
-
->>>>>>> verison2.0

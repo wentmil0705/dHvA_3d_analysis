@@ -47,7 +47,7 @@ After doing the above creating and installing steps, your environment should be 
 ## Running the software
 It is pretty easy to run the software if you have get your environment ready, before running the code you should put all files in the same directory, run it in the terminal,
 
-	`python demo.py`
+	`python main.py`
 
 
 

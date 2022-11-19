@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # dHvA_3d_analysis
 Use Mayavi and PyQt5 to provide a platform to visualize the results of dHvA calculations
-=======
+# MORE TO KNOW ABOUT THE SOFTWARE PLEASE READ dHvA 3D Analysis Documentation
 # dhva_skeaf_data_analysis
 This is software which can analyze the results from skeaf, a dhva calculating open-source program-me. By analyzing the results files, the software can draw de orbit outline, extreme value, and the orbit in the fermi-surface. The software also achieve almost all fermi-surface painting functions.
 
@@ -48,7 +47,7 @@ After doing the above creating and installing steps, your environment should be 
 ## Running the software
 It is pretty easy to run the software if you have get your environment ready, before running the code you should put all files in the same directory, run it in the terminal,
 
-	`python demo.py`
+	`python main.py`
 
 
 
@@ -57,7 +56,7 @@ It is pretty easy to run the software if you have get your environment ready, be
 The software achieved almost all basic functions of fermi-surface plotting functions. After you open the software successfully, you will see the window below,
 
 
-![1.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/1.png)
+![1.png](pic/1.png)
 
 
 Then you can click **File -> Import bxsf file** to input the fermi-surface file, the basic format of bxsf file is showed in the test file, remember to keep the same format or you will get different wrong reports and the software will quit. Choose different ways to show the fermi-surface,
@@ -88,7 +87,7 @@ Then you can click **File -> Import bxsf file** to input the fermi-surface file,
 Below is an example of way to show fermi surface,
 
 
-![2.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/2.png)
+![2.png](pic/2.png)
 
 
 ### Showing skeaf results functions
@@ -107,12 +106,12 @@ If you want to analyze the results generate from skeaf, you can click **File->Im
 Below are some examples,
 
 
-![3.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/3.png)
-![4.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/4.png)
-![5.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/5.png)
-![6.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/6.png)
-![7.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/7.png)
-![8.png](/Users/wentworth/Desktop/skeaf_demo_sw/skeaf_demo_2/test/8.png)
+![3.png](pic/3.png)
+![4.png](pic/4.png)
+![5.png](pic/5.png)
+![6.png](pic/6.png)
+![7.png](pic/7.png)
+![8.png](pic/8.png)
 
 
 
@@ -125,5 +124,3 @@ If you get any problems, please feel free to contact me,
 
 **532239580@qq.com**
 
-
->>>>>>> verison2.0

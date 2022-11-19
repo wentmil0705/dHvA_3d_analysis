@@ -612,7 +612,6 @@ class Visualization(HasTraits):
         b1, b2, b3 = np.linalg.norm(bcell, axis=1)
         b3d = np.tile(ebands, tuple(bz))
         nx, ny, nz = ebands.shape
-        print(nx, ny, nz)
         b3d = np.pad(b3d, (0,1), mode='wrap')
         verts, faces_in_fs, normals, values = marching_cubes(b3d,
                                                         level=efermi,
@@ -925,7 +924,6 @@ class Visualization(HasTraits):
         self.orbit_data_list_full_pm = []
         self.orbit_data_list_full_pm_tube = []
         gamma_region_id = self.tree.query([0, 0, 0])[1]
-        bcell = bcell.T
         
         del self.orbit_data_list_bz
         self.orbit_data_list_bz = self.move_bz_orbit_data(bcell, para_dict)
@@ -1082,7 +1080,6 @@ class Visualization(HasTraits):
                 orig_data = orig_data + moveArray
                 new_data = np.dot(orig_data, bcell)
                 new_orbit_data.append(new_data)
-                print(tree.query(np.sum(new_data, axis=0))[1])
         if para_dict['full_fs_full_trait']:
             bz_max_list = np.asarray(bz_max_list)
             self.bz_size_full = np.max(bz_max_list, axis=0)

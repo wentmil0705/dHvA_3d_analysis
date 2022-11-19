@@ -612,6 +612,7 @@ class Visualization(HasTraits):
         b1, b2, b3 = np.linalg.norm(bcell, axis=1)
         b3d = np.tile(ebands, tuple(bz))
         nx, ny, nz = ebands.shape
+        print(nx, ny, nz)
         b3d = np.pad(b3d, (0,1), mode='wrap')
         verts, faces_in_fs, normals, values = marching_cubes(b3d,
                                                         level=efermi,
@@ -924,6 +925,7 @@ class Visualization(HasTraits):
         self.orbit_data_list_full_pm = []
         self.orbit_data_list_full_pm_tube = []
         gamma_region_id = self.tree.query([0, 0, 0])[1]
+        bcell = bcell.T
         
         del self.orbit_data_list_bz
         self.orbit_data_list_bz = self.move_bz_orbit_data(bcell, para_dict)

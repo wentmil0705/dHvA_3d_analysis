@@ -941,7 +941,7 @@ class myWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         with open(file_path, 'r') as filereader:
             bxsf_orig = filereader.read()
         self.MESH = np.fromiter(map(lambda x: int(x), list(re.findall('BANDGRID_3D_BANDS\n \d+[\s]+(\d+) (\d+) (\d+)', bxsf_orig)[0])), dtype=int)
-        mesh_num = np.fromiter(self.MESH * mesh_ratio, dtype=int)
+        mesh_num = np.fromiter(np.array([np.max(self.MESH)] * 3) * mesh_ratio, dtype=int)
         bxsf = bxsf_orig.split('\n')
         bcell = np.array(list(map(lambda x: float(x), ' '.join(bxsf[9:12]).split()))).reshape(3,3)  ## 这个读取不准确，实际上与kVectors_xyz一致
 
@@ -956,15 +956,23 @@ class myWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         nx = np.linspace(0, 1, mesh_num[0])
         ny = np.linspace(0, 1, mesh_num[1])
         nz = np.linspace(0, 1, mesh_num[2])
-        X,Y,Z = np.meshgrid(nx,ny,nz)
-        xi = np.concatenate((X[:,:,:,None], Y[:,:,:,None], Z[:,:,:,None]),axis=-1).reshape(-1,3)
+        # X,Y,Z = np.meshgrid(nx,ny,nz)
+        # xi = np.concatenate((X[:,:,:,None], Y[:,:,:,None], Z[:,:,:,None]),axis=-1).reshape(-1,3)
+        xi = []
+        for x  in nx:
+            for y in ny:
+                for z in nz:
+                    # coord_nowpos = tuple(np.dot(np.array([x, y, z]), bcell))
+                    coord_nowpos = [x, y, z]
+                    xi.append(coord_nowpos)
+
 
         ebands = np.array(list(map(lambda x: float(x), ebands)))
         ebands = ebands.reshape(self.MESH[0], self.MESH[1], self.MESH[2])
 
         points = (np.linspace(0, 1, self.MESH[0]), np.linspace(0, 1, self.MESH[1]), np.linspace(0, 1, self.MESH[2]))
         values = ebands
-        # xi = np.asarray(xi)
+        xi = np.asarray(xi)
         res = interpn(points, values, xi, method='linear', fill_value=True, bounds_error=False) 
         # 此处使用的插值方法为linear，可以调整其他方法，但计算速度会不一样，详情参考scipy.interpolate.interpn的method介绍
 

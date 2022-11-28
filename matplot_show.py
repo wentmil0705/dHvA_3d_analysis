@@ -54,7 +54,10 @@ class MyMatplotlibFigure(FigureCanvasQTAgg, QtGui.QWidget):
         self.axes.axis('off')
 
     def plotSlice(self, contour_2d, new_res, efermi, color):
-        self.axes.tricontour(contour_2d[:,0], contour_2d[:,1], new_res, [efermi], colors=color) 
+        try:
+            self.axes.tricontour(contour_2d[:,0], contour_2d[:,1], new_res, [efermi], colors=color) 
+        except:
+            pass
         self.figs.canvas.draw()  # 这里注意是画布重绘，self.figs.canvas
         self.figs.canvas.flush_events()  # 画布刷新self.figs.canvas
 
@@ -202,8 +205,8 @@ class MyMatplotlibFigure(FigureCanvasQTAgg, QtGui.QWidget):
         self.figs.clf()
         self.axes = self.figs.add_subplot(111)
 
-        self.axes.plot(np.arange(total['slice'].min(), total['slice'].max()+1), total.sort_values(by=['slice', 'orbit'])['freq'].values)
-        self.axes.scatter(slice, df[(df['slice'] == slice) & (df['orbit'] == orbit)]['freq'], c='red')
+        self.axes.plot(np.arange(total['slice'].min(), total['slice'].max()+1), total.sort_values(by=['slice', 'orbit'])['freq'].values, linewidth=5)
+        self.axes.scatter(slice, df[(df['slice'] == slice) & (df['orbit'] == orbit)]['freq'], c='red', s=200, zorder=2)
         self.freq = df[(df['slice'] == slice) & (df['orbit'] == orbit)]['freq'].values[0]
 
         self.figs.canvas.draw()  # 这里注意是画布重绘，self.figs.canvas

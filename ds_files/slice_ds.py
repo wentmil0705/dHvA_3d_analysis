@@ -262,15 +262,15 @@ class mySlice(QtWidgets.QMainWindow, Ui_slice_window):
 
         if fname[0] != '':
             orbit_data, orbit_pred_freqs, theta, phi = self.read_au_Ang_file(fname[0])
-            if self.THETA is not None:
+            if self.ORBIT_DATA != []:
                 if self.THETA != theta:
                     QtWidgets.QMessageBox.critical(self, "Error", "Mag direction are not consistent!")
-                else:
-                    self.THETA = theta
-                    self.PHI = phi
-                    self.Theta_line.setText(str(theta))
-                    self.Phi_line.setText(str(phi))
-                    self.sc = self.ruc2sc(self.PHI, self.THETA)
+            else:
+                self.THETA = theta
+                self.PHI = phi
+                self.Theta_line.setText(str(theta))
+                self.Phi_line.setText(str(phi))
+                self.sc = self.ruc2sc(self.PHI, self.THETA)
             orbit_data = self.move_bz_orbit_data(self.bz, self.BCELL, orbit_data)
             self.ORBIT_DATA += orbit_data          
             self.ORBIT_PRED += orbit_pred_freqs
